@@ -1,6 +1,6 @@
 {
 	"name": "ipfsconsortiumdata",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "IPFS Pinning Consortium data format and validating schemas",
 	"main": "index.js",
 	"directories": {
