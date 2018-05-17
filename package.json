@@ -1,0 +1,27 @@
+{
+  "name": "ipfsconsortiumdata",
+  "version": "0.0.1",
+  "description": "IPFS Pinning Consortium data format and validating schemas",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "keywords": [
+    "ipfs",
+    "ethereum",
+    "jsonschema"
+  ],
+  "author": "sponnet",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.1"
+  },
+  "dependencies": {
+    "jsonschema": "^1.2.4"
+  }
+}

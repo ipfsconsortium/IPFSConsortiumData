@@ -1,0 +1,41 @@
+{
+	"$id": "http://datapinner.com/metadata.json",
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"definitions": {
+		"manifest": {
+			"properties": {
+				"type": {
+					"$id": "/properties/type",
+					"type": "string",
+					"title": "manifest type",
+					"const": "manifest"
+				},
+				"ttl": {
+					"$id": "/properties/ttl",
+					"type": "integer",
+					"title": "TTL for these hashes, in s",
+					"default": 0
+				},
+				"hashes": {
+					"$id": "/properties/hashes",
+					"type": "array",
+					"items": {
+						"$id": "/properties/hashes/items",
+						"type": "string",
+						"minLength": 46,
+						"maxLength": 46,
+						"title": "IPFS hash"
+					}
+				}
+			},
+			"required": [
+				"type",
+				"hashes"
+			]
+		}
+	},
+	"anyOf": [{
+		"$ref": "#/definitions/manifest"
+	}]
+}
