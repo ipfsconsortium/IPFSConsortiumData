@@ -7,6 +7,10 @@
 		"example": "examples",
 		"test": "test"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://sponnet@github.com/ipfsconsortium/IPFSConsortiumData.git"
+	},
 	"scripts": {
 		"lint": "eslint .",
 		"test": "mocha test"
