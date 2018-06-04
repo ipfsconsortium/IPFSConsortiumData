@@ -1,0 +1,6 @@
+{
+	"type": "parameters",
+	"capacity": "122222200000",
+	"dataformat": "0.0.1",
+	"governancethreshold" : 3
+}
