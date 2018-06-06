@@ -83,10 +83,16 @@
 					"type": "string",
 					"title": "storage quotum for this consortium"
 				},
-				"governancethreshold": {
-					"$id": "/properties/governancethreshold",
-					"type": "integer",
-					"title": "amount of validators to confirm governance functions"
+				"pin": {
+					"$id": "/properties/pin",
+					"type": "array",
+					"items": {
+						"$id": "/properties/pin/items",
+						"type": "string",
+						"minLength": 46,
+						"maxLength": 46,
+						"title": "IPFS hash"
+					}
 				}
 			},
 			"required": [
@@ -108,11 +114,22 @@
 					"title": "TTL for these hashes, in s",
 					"default": 0
 				},
-				"hashes": {
-					"$id": "/properties/hashes",
+				"pin": {
+					"$id": "/properties/pin",
 					"type": "array",
 					"items": {
-						"$id": "/properties/hashes/items",
+						"$id": "/properties/pin/items",
+						"type": "string",
+						"minLength": 46,
+						"maxLength": 46,
+						"title": "IPFS hash"
+					}
+				},
+				"unpin": {
+					"$id": "/properties/unpin",
+					"type": "array",
+					"items": {
+						"$id": "/properties/unpin/items",
 						"type": "string",
 						"minLength": 46,
 						"maxLength": 46,
@@ -121,8 +138,7 @@
 				}
 			},
 			"required": [
-				"type",
-				"hashes"
+				"type"
 			]
 		}
 	},

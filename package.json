@@ -24,9 +24,10 @@
 	"license": "MIT",
 	"devDependencies": {
 		"chai": "^4.1.2",
-		"mocha": "^5.1.1",
 		"eslint": "^4.19.1",
-		"eslint-config-google": "^0.9.1"
+		"eslint-config-google": "^0.9.1",
+		"ipfs-api": "git+https://github.com/sponnet/js-ipfs-api.git",
+		"mocha": "^5.1.1"
 	},
 	"dependencies": {
 		"jsonschema": "^1.2.4"
