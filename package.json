@@ -13,7 +13,8 @@
 	},
 	"scripts": {
 		"lint": "eslint .",
-		"test": "mocha test"
+		"test": "mocha test",
+		"semantic-release": "semantic-release",
 	},
 	"keywords": [
 		"ipfs",
