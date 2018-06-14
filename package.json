@@ -3,21 +3,17 @@
 	"version": "0.0.4",
 	"description": "IPFS Pinning Consortium data format and validating schemas",
 	"main": "index.js",
-	"directories": {
-		"example": "examples",
-		"test": "test"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://sponnet@github.com/ipfsconsortium/IPFSConsortiumData.git"
 	},
 	"scripts": {
-		"lint": "eslint .",
 		"test": "mocha test",
 		"semantic-release": "semantic-release"
 	},
 	"keywords": [
 		"ipfs",
+		"ens",
 		"ethereum",
 		"jsonschema"
 	],
@@ -25,9 +21,6 @@
 	"license": "MIT",
 	"devDependencies": {
 		"chai": "^4.1.2",
-		"eslint": "^4.19.1",
-		"eslint-config-google": "^0.9.1",
-		"ipfs-api": "git+https://github.com/sponnet/js-ipfs-api.git",
 		"mocha": "^5.1.1",
 		"semantic-release": "^15.5.2"
 	},
