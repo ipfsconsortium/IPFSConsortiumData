@@ -1,103 +1,49 @@
 {
 	"$id": "http://datapinner.com/metadata-spec.json",
 	"definitions": {
-		"ecsignature": {
+		"member": {
 			"properties": {
-				"s": {
-					"$id": "/properties/s",
-					"type": "string"
+				"ensname": {
+					"$id": "/properties/ensname",
+					"type": "string",
+					"title": "ENS entry that resolves to IPFS hash with root manifest"
 				},
-				"r": {
-					"$id": "/properties/r",
-					"type": "string"
-				},
-				"v": {
-					"$id": "/properties/v",
-					"type": "integer"
+				"membersize": {
+					"$id": "/properties/membersize",
+					"type": "string",
+					"title": "max size in bytes that this member needs"
 				}
 			},
 			"required": [
-				"s",
-				"r",
-				"v"
+				"ensname",
+				"membersize"
 			]
 		},
-		"addmember": {
+		"consortium": {
 			"properties": {
 				"type": {
 					"$id": "/properties/type",
 					"type": "string",
-					"title": "addmember type",
-					"const": "addmember"
+					"title": "metadata type",
+					"const": "consortium"
 				},
-				"member": {
-					"$id": "/properties/member",
+				"globalsize": {
+					"$id": "/properties/globalsize",
 					"type": "string",
-					"title": "pubkey of the member"
+					"title": "max consortium size in bytes"
 				},
-				"signature": {
-					"type": "object",
-					"$ref": "#/definitions/ecsignature"
-				}
-			},
-			"required": [
-				"type",
-				"member",
-				"signature"
-			]
-		},
-		"removemember": {
-			"properties": {
-				"type": {
-					"$id": "/properties/type",
-					"type": "string",
-					"title": "removemember type",
-					"const": "removemember"
-				},
-				"member": {
-					"$id": "/properties/member",
-					"type": "string",
-					"title": "pubkey of the member"
-				},
-				"signature": {
-					"type": "object",
-					"$ref": "#/definitions/ecsignature"
-				}
-			},
-			"required": [
-				"type",
-				"member",
-				"signature"
-			]
-		},
-		"parameters": {
-			"properties": {
-				"type": {
-					"$id": "/properties/type",
-					"type": "string",
-					"title": "manifest type",
-					"const": "parameters"
-				},
-				"capacity": {
-					"$id": "/properties/capacity",
-					"type": "string",
-					"title": "storage quotum for this consortium"
-				},
-				"pin": {
-					"$id": "/properties/pin",
+				"members": {
+					"$id": "/properties/members",
 					"type": "array",
 					"items": {
-						"$id": "/properties/pin/items",
-						"type": "string",
-						"minLength": 46,
-						"maxLength": 46,
-						"title": "IPFS hash"
+						"type": "object",
+						"$ref": "#/definitions/member"
 					}
 				}
 			},
 			"required": [
 				"type",
-				"capacity"
+				"globalsize"
 			]
 		},
 		"manifest": {
@@ -146,10 +92,6 @@
 	"anyOf": [{
 		"$ref": "#/definitions/manifest"
 	}, {
-		"$ref": "#/definitions/parameters"
-	}, {
-		"$ref": "#/definitions/addmember"
-	}, {
-		"$ref": "#/definitions/removemember"
+		"$ref": "#/definitions/consortium"
 	}]
 }

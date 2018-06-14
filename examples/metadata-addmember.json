@@ -1,9 +1,0 @@
-{
-	"type": "addmember",
-	"member": "0x2",
-	"signature": {
-		"r": "0x00..",
-		"s": "0x00..",
-		"v": 1
-	}
-}
