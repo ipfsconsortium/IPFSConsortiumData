@@ -1,9 +1,24 @@
-sudo: required
-dist: trusty
 language: node_js
+
+cache:
+  directories:
+    - "˜/.npm"
+
 node_js:
   - '9'
-install:
-  - npm install
+
+before_install:
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ~/.npmrc
+  - npm i -g truffle@4.1.6
+
 script:
   - npm test
+
+deploy:
+  provider: script
+  skip_cleanup: true
+  script:
+    - npm run semantic-release
+  on:
+    branch: master
+    repo: ipfsconsortium/IPFSConsortiumData
