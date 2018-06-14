@@ -67,7 +67,6 @@
 						"$id": "/properties/pin/items",
 						"type": "string",
 						"minLength": 46,
-						"maxLength": 46,
 						"title": "IPFS hash"
 					}
 				},
@@ -78,7 +77,6 @@
 						"$id": "/properties/unpin/items",
 						"type": "string",
 						"minLength": 46,
-						"maxLength": 46,
 						"title": "IPFS hash"
 					}
 				}
