@@ -26,5 +26,8 @@
 	},
 	"dependencies": {
 		"jsonschema": "^1.2.4"
+	},
+	"bin": {
+		"ipfsconsortiumvalidate": "validate.js"
 	}
 }
