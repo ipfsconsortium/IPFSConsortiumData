@@ -42,6 +42,7 @@ This will exit with 0 if the file is valid - 1 if the file is invalid and will p
 
 # Notes
 
+
 The schema's are located in `spec`
 
 Examples can be found in `examples`
