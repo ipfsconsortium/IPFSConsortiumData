@@ -1,10 +1,10 @@
 {
 	"type": "consortium",
-	"globalsize": "10000000000000",
+	"quotum": "100000000000",
 	"members": [
 		{
 			"ensname": "consortium.dappnode.eth",
-			"membersize": "1000000"
+			"quotum": "10000000000"
 		}
 	]
 }

@@ -8,15 +8,15 @@
 					"type": "string",
 					"title": "ENS entry that resolves to IPFS hash with root manifest"
 				},
-				"membersize": {
-					"$id": "/properties/membersize",
+				"quotum": {
+					"$id": "/properties/quotum",
 					"type": "string",
-					"title": "max size in bytes that this member needs"
+					"title": "max size in bytes that this member can pin"
 				}
 			},
 			"required": [
 				"ensname",
-				"membersize"
+				"quotum"
 			]
 		},
 		"consortium": {
@@ -27,8 +27,8 @@
 					"title": "metadata type",
 					"const": "consortium"
 				},
-				"globalsize": {
-					"$id": "/properties/globalsize",
+				"quotum": {
+					"$id": "/properties/quotum",
 					"type": "string",
 					"title": "max consortium size in bytes"
 				},
@@ -43,7 +43,7 @@
 			},
 			"required": [
 				"type",
-				"globalsize"
+				"quotum"
 			]
 		},
 		"manifest": {
